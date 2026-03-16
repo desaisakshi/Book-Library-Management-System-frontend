@@ -1,0 +1,144 @@
+/* My Reviews Page Styles */
+
+.reviews-page {
+  padding: 40px 0;
+  min-height: calc(100vh - 64px);
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Reviews List */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  gap: 20px;
+  align-items: start;
+}
+
+.review-book {
+  display: flex;
+  gap: 15px;
+}
+
+.review-book .book-cover {
+  width: 60px;
+  height: 80px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.review-book .book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-book .book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-book .book-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.review-rating .star {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.review-rating .star.filled {
+  color: #f39c12;
+}
+
+.review-content {
+  padding: 10px 0;
+}
+
+.review-content p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.review-content .badge {
+  margin-top: 10px;
+}
+
+.review-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .review-card {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .review-book {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+  }
+
+  .review-actions {
+    flex-direction: row;
+  }
+
+  .review-actions .btn {
+    flex: 1;
+  }
+}
+
