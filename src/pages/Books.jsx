@@ -164,7 +164,7 @@ const Books = () => {
                   </p>
                   <span className="book-genre">{book.genre}</span>
                   <div className="book-meta">
-                    <span className="book-rating">⭐ {book.average_rating?.toFixed(1) || '0.0'}</span>
+                    <span className="book-rating">⭐ {Number(book.average_rating)?.toFixed(1) || '0.0'}</span>
                     <span className="book-copies">{book.available_copies} available</span>
                   </div>
                 </div>

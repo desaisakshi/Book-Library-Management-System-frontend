@@ -198,7 +198,7 @@ const Dashboard = () => {
                       </div>
                       <div className="book-info">
                         <strong>{book.title}</strong>
-                        <span>{book.average_rating?.toFixed(1) || '0.0'} ⭐</span>
+                        <span>{Number(book.average_rating)?.toFixed(1) || '0.0'} ⭐</span>
                       </div>
                     </Link>
                   ))}

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://book-library-management-system-backend.onrender.com/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 const api = axios.create({ baseURL: API_URL, headers: { 'Content-Type': 'application/json' } });
 
@@ -85,6 +85,7 @@ export const reviewAPI = {
 };
 
 export const authorAPI = {
+  getAll:           (p)  => api.get('/authors', { params: p }),
   getProfile:       (id) => api.get(`/authors/${id}`),
   getBooks:         (id) => api.get(`/authors/${id}/books`),
   getManuscripts:   (id) => api.get(`/authors/${id}/manuscripts`),
@@ -92,6 +93,9 @@ export const authorAPI = {
   submitManuscript: (d)  => api.post('/authors/manuscripts', d),
   getPending:       ()   => api.get('/authors/admin/pending'),
   approve:          (id, d) => api.post(`/authors/admin/${id}/approve`, d),
+  create:           (d)  => api.post('/authors', d),
+  update:           (id, d) => api.put(`/authors/${id}`, d),
+  delete:           (id) => api.delete(`/authors/${id}`),
 };
 
 export const analyticsAPI = {

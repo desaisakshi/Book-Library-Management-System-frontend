@@ -104,8 +104,8 @@ const Home = () => {
                     <h3 className="book-title">{book.title}</h3>
                     <p className="book-author">{book.author?.user?.first_name} {book.author?.user?.last_name}</p>
                     <div className="book-meta">
-                      <span className="book-rating">⭐ {book.average_rating?.toFixed(1) || '0.0'}</span>
-                      <span className="book-copies">{book.available_copies} available</span>
+                      <span className="book-rating">⭐ {Number(book.average_rating)?.toFixed(1) || '0.0'}</span>
+                      <span className="book-copies">{Number(book.available_copies)} available</span>
                     </div>
                   </div>
                 </Link>
@@ -142,7 +142,7 @@ const Home = () => {
                     <h3 className="book-title">{book.title}</h3>
                     <p className="book-author">{book.author?.user?.first_name} {book.author?.user?.last_name}</p>
                     <div className="book-meta">
-                      <span className="book-rating">⭐ {book.average_rating?.toFixed(1) || '0.0'}</span>
+                      <span className="book-rating">⭐ {Number(book.average_rating)?.toFixed(1) || '0.0'}</span>
                       <span className="book-copies">{book.rental_count} rentals</span>
                     </div>
                   </div>
