@@ -15,7 +15,8 @@ const MyRentals = () => {
   const fetchRentals = async () => {
     try {
       const response = await rentalAPI.getUserRentals();
-      const responseData = response.data.data;
+      console.log(response);
+      const responseData = response.data.data.rentals;
       let allRentals = responseData?.rentals || responseData || [];
       
       if (filter === 'active') {
